@@ -308,6 +308,7 @@ func dumpRequest(req *http.Request) {
 // v is the interface to unmarshal the response JSON into
 func (c *Client) DoRequest(method, path string, body, v interface{}) (*Response, error) {
 	req, err := c.NewRequest(method, path, body)
+	req.Header.Set("X-Packet-Staff", "true")
 	if c.debug {
 		dumpRequest(req)
 	}
