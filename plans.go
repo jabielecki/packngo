@@ -92,7 +92,6 @@ type Specs struct {
 	Cpus     []*Cpus   `json:"cpus,omitempty"`
 	Memory   *Memory   `json:"memory,omitempty"`
 	Drives   []*Drives `json:"drives,omitempty"`
-	Nics     []*Nics   `json:"nics,omitempty"`
 	Features *Features `json:"features,omitempty"`
 }
 
